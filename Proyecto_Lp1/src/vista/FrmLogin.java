@@ -5,6 +5,7 @@ import java.awt.Component;
 import java.awt.Cursor;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.Frame;
 import java.awt.Image;
 import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
@@ -47,7 +48,7 @@ import javax.swing.JComboBox;
 
 
 @SuppressWarnings("serial")
-public class FrmLogin extends JFrame {
+public class FrmLogin extends javax.swing.JFrame  {
 	public String colorPrincipal="#232f43";
 	private JPanel Jpanel_menu_login;
 	private JPasswordField txtClaveUsu;
@@ -215,12 +216,16 @@ public class FrmLogin extends JFrame {
 		btnIniciarSecin = new JButton("INICIAR SECI\u00D3N");
 		btnIniciarSecin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+			
+			
 			}
 		});
 		
 		btnIniciarSecin.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
+				Frame a=new Frame();
+				new alert.AlertSuccess(a,true).setVisible(true);;
 				validarLogin();
 			}
 		});
@@ -421,7 +426,7 @@ public class FrmLogin extends JFrame {
 			}
 			
 			if (e.getId_tip_emp().equals("2")) {
-		
+		/*
 				p.setVisible(true);
 				p.mnAlmacen.setEnabled(false);
 				
@@ -432,6 +437,6 @@ public class FrmLogin extends JFrame {
 		
 				p.lblUser2.setIcon(new ImageIcon(FrmLogin.class.getResource("/img/vendedor.png")));
 				dispose();
-			}
+			*/}
 		}	}
 }

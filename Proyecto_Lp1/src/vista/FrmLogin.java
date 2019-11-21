@@ -224,8 +224,7 @@ public class FrmLogin extends javax.swing.JFrame  {
 		btnIniciarSecin.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				Frame a=new Frame();
-				new alert.AlertSuccess(a,true).setVisible(true);;
+			
 				validarLogin();
 			}
 		});
@@ -347,12 +346,14 @@ public class FrmLogin extends javax.swing.JFrame  {
 
 		if (txtIngUsu.getText().isEmpty()) {
 			btnIniciarSecin.setEnabled(false);
+			
 			btnIniciarSecin.setBackground(new Color(51, 51, 51));
 			btnIniciarSecin.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
 
 		} else {
 
 			btnIniciarSecin.setEnabled(true);
+		
 			btnIniciarSecin.setBackground(SystemColor.windowBorder);
 			btnIniciarSecin.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 13));
 
@@ -411,7 +412,9 @@ public class FrmLogin extends javax.swing.JFrame  {
 			JOptionPane.showMessageDialog(null, "algo incorrecto");
 
 		} else {
-			JOptionPane.showMessageDialog(null, " Bienvenido " + e.getNom_emp() + "  " + e.getApe_pat_emp());
+			Frame a=new Frame();
+			new alert.AlertSuccess(a,true).setVisible(true);
+			/*JOptionPane.showMessageDialog(null, " Bienvenido " + e.getNom_emp() + "  " + e.getApe_pat_emp());*/
 			FrmMenuPrincipal p = new FrmMenuPrincipal();
 			p.lblUsuario.setText(e.getNom_emp()+" "+e.getApe_pat_emp());
 			//METODO PARA VALIDAR RESTRICCION DE GUIS

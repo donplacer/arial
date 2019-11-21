@@ -54,6 +54,7 @@ import java.awt.Component;
 import keeptoo.KGradientPanel;
 import javax.swing.JLayeredPane;
 import javax.swing.JToggleButton;
+import javax.swing.JTabbedPane;
 
 public class FrmMenuPrincipal extends JFrame {
 
@@ -92,7 +93,6 @@ public class FrmMenuPrincipal extends JFrame {
 	private String colorCeleste="#26a2fc";
 	private String colorMenu="#343957";
 	private String colorHover="#222b38";
-	private JLabel lblArchivo;
 	private JPanel panel_4;
 	private JLabel label_11;
 	private JLabel label_12;
@@ -105,6 +105,8 @@ public class FrmMenuPrincipal extends JFrame {
 	private JPanel panel_oculto2;
 	private JLabel label_16;
 	private JLabel lblCambiarContrasea;
+	private JLabel label_17;
+	private JLayeredPane layeredPane;
 
 	/**
 	 * Launch the application.
@@ -149,26 +151,26 @@ public class FrmMenuPrincipal extends JFrame {
 				
 				panel_1 = new JPanel();
 				panel_1.setBorder(new EmptyBorder(0, 0, 0, 0));
-				panel_1.setBounds(221, 0, 1464, 911);
+				panel_1.setBounds(227, 144, 1462, 684);
 				contentPane.add(panel_1);
 				panel_1.setLayout(new CardLayout(0, 0));
 				
 				dktBody = 	new JDesktopPane();
 				dktBody.setBounds(new Rectangle(0, 0, 1490, 0));
-				dktBody.setBackground(Color.decode("#f8f9fc"));
+				dktBody.setBackground(Color.decode("#f2f2f2"));
 				dktBody.setBorder(new EmptyBorder(0, 0, 0, 0));
 				panel_1.add(dktBody, "name_995467860582600");
 				
 				lblTablero = new JLabel("DASHBOARD");
 				lblTablero.setFont(new Font("Tahoma", Font.BOLD, 19));
 				lblTablero.setForeground(Color.decode("#aaaaa9"));
-				lblTablero.setBounds(27, 114, 151, 37);
+				lblTablero.setBounds(27, 0, 151, 37);
 				dktBody.add(lblTablero);
 				
 				JPanel panel_6 = new JPanel();
 				panel_6.setBackground(Color.WHITE);
 				panel_6.setBorder(new MatteBorder(0, 2, 0, 0, (Color) new Color(78, 115, 223)));
-				panel_6.setBounds(27, 209, 227, 79);
+				panel_6.setBounds(27, 95, 227, 79);
 				dktBody.add(panel_6);
 				panel_6.setLayout(null);
 				
@@ -191,7 +193,7 @@ public class FrmMenuPrincipal extends JFrame {
 				panel_2.setLayout(null);
 				panel_2.setBorder(new MatteBorder(0, 2, 0, 0, (Color) Color.decode("#1cc88a")));
 				panel_2.setBackground(Color.WHITE);
-				panel_2.setBounds(381, 209, 227, 79);
+				panel_2.setBounds(381, 95, 227, 79);
 				dktBody.add(panel_2);
 				
 				label_8 = new JLabel("Ganancia");
@@ -208,7 +210,7 @@ public class FrmMenuPrincipal extends JFrame {
 				panel_3.setLayout(null);
 				panel_3.setBorder(new MatteBorder(0, 2, 0, 0, (Color) Color.decode("#36ba9cc")));
 				panel_3.setBackground(Color.WHITE);
-				panel_3.setBounds(757, 209, 227, 79);
+				panel_3.setBounds(757, 95, 227, 79);
 				dktBody.add(panel_3);
 				
 				label_5 = new JLabel("Ventas");
@@ -225,7 +227,7 @@ public class FrmMenuPrincipal extends JFrame {
 				panel_7.setLayout(null);
 				panel_7.setBorder(new MatteBorder(0, 2, 0, 0, (Color) Color.decode("#f6c23e")));
 				panel_7.setBackground(Color.WHITE);
-				panel_7.setBounds(1073, 209, 227, 79);
+				panel_7.setBounds(1073, 95, 227, 79);
 				dktBody.add(panel_7);
 				
 				label_9 = new JLabel("Proveedores");
@@ -244,131 +246,13 @@ public class FrmMenuPrincipal extends JFrame {
 				dktBody.add(lblEstadisticasImportantesDe);
 				
 				lblNewLabel_3 = new JLabel("___________________________________________________________________________________________________________________________________________________________________________________________________________________");
-				lblNewLabel_3.setBounds(27, 152, 1273, 14);
+				lblNewLabel_3.setBounds(27, 38, 1273, 14);
 				lblNewLabel_3.setForeground(Color.decode("#aaaa9"));
 				dktBody.add(lblNewLabel_3);
-				
-				panel_5 = new JPanel();
-				panel_5.setBounds(1292, 0, 170, 53);
-				panel_5.setBackground(Color.WHITE);
-				dktBody.add(panel_5);
-				panel_5.addMouseListener(new MouseAdapter() {
-					@Override
-					public void mouseReleased(MouseEvent arg0) {
-						
-						int et1=panel_oculto.getY();
-						int et2=panel_oculto2.getY();
-						if(et1==0) {
-							
-							Animacion.bajar(0, 50, 4, panel_oculto);
-							Animacion.bajar(50, 100, 4, panel_oculto2);
-						}
-						else {
-							Animacion.subir(50, 0, 4, panel_oculto);
-							Animacion.subir(100, 0, 4, panel_oculto2);
-						}
-						
-					}
-				});
-				panel_5.setLayout(null);
-				
-				label_15 = new JLabel("");
-				label_15.setBounds(128, 11, 32, 32);
-				panel_5.add(label_15);
-				label_15.addMouseListener(new MouseAdapter() {
-					@Override
-					public void mouseReleased(MouseEvent arg0) {
-						int et1=panel_oculto.getY();
-						int et2=panel_oculto2.getY();
-						if(et1==0) {
-							
-							Animacion.bajar(0, 50, 4, panel_oculto);
-							Animacion.bajar(50, 100, 4, panel_oculto2);
-						}
-						else {
-							Animacion.subir(50, 0, 4, panel_oculto);
-							Animacion.subir(100, 0, 4, panel_oculto2);
-						}
-						
-						
-						
-						
-					}
-				});
-				label_15.setIcon(new ImageIcon(FrmMenuPrincipal.class.getResource("/iconos/iconfinder_basics-08_296826.png")));
-				label_15.setCursor(new Cursor(12));
-				
-				lblCargo = new JLabel("");
-				lblCargo.setBounds(52, 1, 79, 42);
-				panel_5.add(lblCargo);
-				lblCargo.setFont(new Font("Agency FB", Font.PLAIN, 14));
-				lblCargo.setForeground(Color.BLACK);
-				
-				lblUser2 = new JLabel("");
-				lblUser2.setBounds(0, 1, 50, 42);
-				panel_5.add(lblUser2);
-				
-				panel_oculto2 = new JPanel();
-				panel_oculto2.setBounds(1088, 0, 169, 53);
-				dktBody.add(panel_oculto2);
-				panel_oculto2.setLayout(null);
-				
-				lblCambiarContrasea = new JLabel("Cambiar Contrase\u00F1a");
-				lblCambiarContrasea.setBounds(62, 11, 97, 31);
-				panel_oculto2.add(lblCambiarContrasea);
-				
-				panel_oculto = new JPanel();
-				panel_oculto.setBounds(1292, 0, 169, 53);
-				dktBody.add(panel_oculto);
-				panel_oculto.setLayout(null);
-				
-				JLabel lblMiPerfil = new JLabel("Mi perfil");
-				lblMiPerfil.setFont(new Font("Agency FB", Font.PLAIN, 25));
-				lblMiPerfil.setBounds(50, 0, 119, 53);
-				lblMiPerfil.setHorizontalAlignment(SwingConstants.CENTER);
-				panel_oculto.add(lblMiPerfil);
-				
-				label_16 = new JLabel("");
-				label_16.setIcon(new ImageIcon(FrmMenuPrincipal.class.getResource("/img/user.png")));
-				label_16.setBounds(22, 0, 30, 53);
-				panel_oculto.add(label_16);
-				
-				lblFecha = new JLabel("");
-				lblFecha.setBounds(1043, 91, 93, 14);
-				dktBody.add(lblFecha);
-				lblFecha.setForeground(Color.WHITE);
-				
-				lblReloj = new JLabel("");
-				lblReloj.setBounds(1072, 91, 86, 14);
-				dktBody.add(lblReloj);
-				lblReloj.setForeground(Color.WHITE);
 				
 				lblUsuario = new JLabel("");
 				lblUsuario.setBounds(1019, 91, 77, 14);
 				dktBody.add(lblUsuario);
-				
-				lblArchivo = new JLabel("Archivo");
-				lblArchivo.setBounds(39, 91, 61, 14);
-				dktBody.add(lblArchivo);
-				lblArchivo.addMouseListener(new MouseAdapter() {
-					@Override
-					public void mouseEntered(MouseEvent e) {
-						lblArchivo.setForeground(Color.white);
-						
-					}
-					@Override
-					public void mouseExited(MouseEvent e) {
-						lblArchivo.setForeground(Color.decode("#6f6f6f"));
-						
-					}
-				});
-				lblArchivo.setFont(new Font("Arial", Font.PLAIN, 15));
-				lblArchivo.setForeground(Color.decode("#6f6f6f"));
-				
-				panel_9 = new JPanel();
-				panel_9.setBackground(Color.WHITE);
-				panel_9.setBounds(0, 0, 1293, 53);
-				dktBody.add(panel_9);
 				
 				panel_4 = new JPanel();
 				panel_4.setBounds(0, 0, 222, 911);
@@ -606,9 +490,149 @@ public class FrmMenuPrincipal extends JFrame {
 					panel_8.add(label_14);
 					
 					lblNewLabel_4 = new JLabel("___________________________________________________________________________");
-					lblNewLabel_4.setBounds(0, 39, 244, 14);
+					lblNewLabel_4.setBounds(0, 60, 244, 14);
 					panel_4.add(lblNewLabel_4);
 					lblNewLabel_4.setForeground(Color.WHITE);
+					
+					panel_5 = new JPanel();
+					panel_5.setBounds(1515, 0, 170, 53);
+					contentPane.add(panel_5);
+					panel_5.setBackground(Color.WHITE);
+					panel_5.addMouseListener(new MouseAdapter() {
+						@Override
+						public void mouseReleased(MouseEvent arg0) {
+							
+							int et1=panel_oculto.getY();
+							int et2=panel_oculto2.getY();
+							if(et1==0) {
+								
+								Animacion.bajar(0, 53, 4, panel_oculto);
+								Animacion.bajar(53, 100, 4, panel_oculto2);
+							}
+							else {
+								Animacion.subir(53, 0, 4, panel_oculto);
+								Animacion.subir(100, 0, 4, panel_oculto2);
+							}
+							
+						}
+					});
+					panel_5.setLayout(null);
+					
+					label_15 = new JLabel("");
+					label_15.setBounds(128, 11, 32, 32);
+					panel_5.add(label_15);
+					label_15.addMouseListener(new MouseAdapter() {
+						@Override
+						public void mouseReleased(MouseEvent arg0) {
+							int et1=panel_oculto.getY();
+							int et2=panel_oculto2.getY();
+							if(et1==0) {
+								
+								Animacion.bajar(0, 50, 4, panel_oculto);
+								Animacion.bajar(50, 100, 4, panel_oculto2);
+							}
+							else {
+								Animacion.subir(50, 0, 4, panel_oculto);
+								Animacion.subir(100, 0, 4, panel_oculto2);
+							}
+							
+							
+							
+							
+						}
+					});
+					label_15.setIcon(new ImageIcon(FrmMenuPrincipal.class.getResource("/iconos/iconfinder_basics-08_296826.png")));
+					label_15.setCursor(new Cursor(12));
+					
+					lblCargo = new JLabel("");
+					lblCargo.setBounds(52, 1, 79, 42);
+					panel_5.add(lblCargo);
+					lblCargo.setFont(new Font("Agency FB", Font.PLAIN, 14));
+					lblCargo.setForeground(Color.BLACK);
+					
+					lblUser2 = new JLabel("");
+					lblUser2.setBounds(0, 1, 50, 42);
+					panel_5.add(lblUser2);
+					
+					panel_oculto2 = new JPanel();
+					panel_oculto2.setBounds(1515, 0, 169, 53);
+					contentPane.add(panel_oculto2);
+					panel_oculto2.addMouseListener(new MouseAdapter() {
+						@Override
+						public void mouseEntered(MouseEvent e) {
+							
+							
+							panel_oculto2.setBackground(Color.decode("#EBEAEA"));
+						}
+						@Override
+						public void mouseExited(MouseEvent e) {
+							panel_oculto2.setBackground(Color.decode("#f2f2f2"));
+						}
+					});
+					panel_oculto2.setLayout(null);
+					
+					lblCambiarContrasea = new JLabel("Cambiar Contrase\u00F1a");
+					lblCambiarContrasea.setFont(new Font("Agency FB", Font.PLAIN, 18));
+					lblCambiarContrasea.setBounds(54, 10, 107, 31);
+					panel_oculto2.add(lblCambiarContrasea);
+					
+					label_17 = new JLabel("");
+					label_17.setIcon(new ImageIcon(FrmMenuPrincipal.class.getResource("/iconos/pass.png")));
+					label_17.setBounds(12, 10, 32, 31);
+					panel_oculto2.add(label_17);
+					
+					panel_oculto = new JPanel();
+					panel_oculto.setBounds(1515, 0, 169, 53);
+					contentPane.add(panel_oculto);
+					panel_oculto.addMouseListener(new MouseAdapter() {
+						@Override
+						public void mouseEntered(MouseEvent e) {
+							
+							panel_oculto.setBackground(Color.decode("#EBEAEA"));
+							
+						}
+						@Override
+						public void mouseExited(MouseEvent e) {
+							panel_oculto.setBackground(Color.decode("#f2f2f2"));
+						}
+					});
+					panel_oculto.setLayout(null);
+					
+					JLabel lblMiPerfil = new JLabel("Mi perfil");
+					lblMiPerfil.setFont(new Font("Agency FB", Font.PLAIN, 18));
+					lblMiPerfil.setBounds(53, 0, 116, 53);
+					
+					panel_oculto.add(lblMiPerfil);
+					
+					label_16 = new JLabel("");
+					label_16.setFont(new Font("Agency FB", Font.PLAIN, 11));
+					label_16.setIcon(new ImageIcon(FrmMenuPrincipal.class.getResource("/img/user.png")));
+					label_16.setBounds(10, 0, 42, 53);
+					panel_oculto.add(label_16);
+					
+					panel_9 = new JPanel();
+					panel_9.setBounds(223, 0, 1293, 53);
+					contentPane.add(panel_9);
+					panel_9.setBackground(Color.WHITE);
+					panel_9.setLayout(null);
+					
+					lblFecha = new JLabel("");
+					lblFecha.setFont(new Font("Agency FB", Font.BOLD, 16));
+					lblFecha.setBounds(23, 13, 93, 29);
+					panel_9.add(lblFecha);
+					lblFecha.setForeground(Color.BLACK);
+					
+					lblReloj = new JLabel("");
+					lblReloj.setFont(new Font("Agency FB", Font.BOLD, 16));
+					lblReloj.setBounds(86, 13, 86, 29);
+					panel_9.add(lblReloj);
+					lblReloj.setForeground(Color.BLACK);
+					
+					layeredPane = new JLayeredPane();
+					layeredPane.setBackground(Color.decode("#f2f2f2"));
+					layeredPane.setOpaque(true);
+					layeredPane.setBounds(220, 55, 1471, 153);
+					contentPane.add(layeredPane);
 				
 			
 				

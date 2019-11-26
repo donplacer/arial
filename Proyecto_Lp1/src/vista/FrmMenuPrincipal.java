@@ -461,7 +461,7 @@ public class FrmMenuPrincipal extends JFrame {
 							
 						}
 					});
-					panel_8.setBounds(0, 417, 222, 51);
+					panel_8.setBounds(-1, 396, 222, 51);
 					panel_4.add(panel_8);
 					panel_8.setLayout(null);
 					panel_8.setBackground(Color.decode(colorMenu));
@@ -490,7 +490,7 @@ public class FrmMenuPrincipal extends JFrame {
 					panel_8.add(label_14);
 					
 					lblNewLabel_4 = new JLabel("___________________________________________________________________________");
-					lblNewLabel_4.setBounds(0, 60, 244, 14);
+					lblNewLabel_4.setBounds(-2, 43, 244, 14);
 					panel_4.add(lblNewLabel_4);
 					lblNewLabel_4.setForeground(Color.WHITE);
 					
@@ -582,6 +582,7 @@ public class FrmMenuPrincipal extends JFrame {
 					panel_oculto2.add(label_17);
 					
 					panel_oculto = new JPanel();
+					panel_oculto.setEnabled(false);
 					panel_oculto.setBounds(1515, 0, 169, 53);
 					contentPane.add(panel_oculto);
 					panel_oculto.addMouseListener(new MouseAdapter() {
@@ -590,10 +591,26 @@ public class FrmMenuPrincipal extends JFrame {
 							
 							panel_oculto.setBackground(Color.decode("#EBEAEA"));
 							
+							
 						}
 						@Override
 						public void mouseExited(MouseEvent e) {
 							panel_oculto.setBackground(Color.decode("#f2f2f2"));
+						}
+						@Override
+						public void mouseClicked(MouseEvent arg0) {
+							
+							frmPerfil f=new frmPerfil();
+							 f.setVisible(true);
+							f.setLocationRelativeTo(null);
+							
+							if(f.isOpaque()) {
+							panel_oculto.setEnabled(false);
+							}
+							else {
+								panel_oculto.setEnabled(false);
+							}
+							
 						}
 					});
 					panel_oculto.setLayout(null);
@@ -631,7 +648,7 @@ public class FrmMenuPrincipal extends JFrame {
 					layeredPane = new JLayeredPane();
 					layeredPane.setBackground(Color.decode("#f2f2f2"));
 					layeredPane.setOpaque(true);
-					layeredPane.setBounds(220, 55, 1471, 153);
+					layeredPane.setBounds(220, 55, 1471, 97);
 					contentPane.add(layeredPane);
 				
 			

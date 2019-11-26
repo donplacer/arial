@@ -144,7 +144,7 @@ public class GestionClientes implements InterfaceCliente {
 			
 			pst=(PreparedStatement) con.prepareStatement(sql);
 			
-			
+			System.out.println("rse");
 		
 			
 			rs=pst.executeUpdate();
